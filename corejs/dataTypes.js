@@ -34,3 +34,10 @@ console.log(firstValue);
 console.log(`Type ${typeof firstValue}`); //data type is object as null can not represent any data type
 
 //console.log(globalThis)
+
+
+//symbol data type -
+
+mySym = Symbol("New Value");
+console.log("Symbol ", mySym);
+console.log("TypeOf Symbol ", typeof mySym);

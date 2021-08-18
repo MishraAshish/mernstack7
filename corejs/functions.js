@@ -5,7 +5,7 @@ function printName(params) {
     console.log(`Printing the name ${params}`)
 };
 
-printName("Robin");
+printName("Robin"); //invocation of function
 
 //create a sum function which take two parameters and returns sum of both the parameters
 
