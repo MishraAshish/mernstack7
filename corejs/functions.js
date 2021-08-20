@@ -21,11 +21,12 @@ printName("An Vu");
 //nesting of functions 
 //accessibility is from parent to child i.e- child can access anything present in parent function
 function nameA(params) {
-
+    var a = "test";
+    //var c = b;
     function nameB(params) {
 
         function nameC(params) {
-    
+            var b = a;
         }
     }    
 }
