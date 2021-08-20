@@ -39,3 +39,24 @@ Student.getAddress = function () {
 console.log(Student.getName()) //Robin
 console.log(Student.getAddress()) //Somewhere in the world
 //console.log(User.getAddress()) //error
+
+//merging two objects, with deep copy
+
+var obj1 = {name : "MyName", age : 29, salary : 250}
+var obj1_1 = {name : "MyName1", session:"MERNStack"}
+var obj2 = {name : "YourName", address:"New City ", skills : "Javascript"}
+
+obj1 = Object.assign(obj1, obj1_1, obj2); //over-rides the values from source object into target
+
+console.log(obj1);
+
+//if we wish to break the prototype chain
+//you need to pass null in your object create constructor
+
+var nullProtoype =  Object.create(null);
+
+console.log(nullProtoype.__proto__)
+
+var emptyProtoype =  Object.create({});
+
+console.log(emptyProtoype.__proto__)
