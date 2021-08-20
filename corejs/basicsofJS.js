@@ -17,3 +17,8 @@ console.log(MyAddress) // alt+shift+down arrow to copy a line
 */
 
 // ; - is optional
+
+//An - basics of js, datatypes, hoisting
+//Robin - functions, operators
+//Saranaya - literals, datatypes
+//Margi - overloading, hoisting
