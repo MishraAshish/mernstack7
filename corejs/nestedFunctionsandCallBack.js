@@ -1,7 +1,8 @@
 // callback : when we pass a function as a parameter we call it as a callback function
+var sessionName = "Vanila Javascript";
 
 function Print(params) {
-    console.log(`I am a printer ${JSON.stringify(params)}`)
+    console.log(`I am a printer ${JSON.stringify(params)} ${sessionName}`)
 }
 
 function GetDetails(name, age, address, callBack) {
