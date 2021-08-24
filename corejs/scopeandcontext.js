@@ -6,8 +6,18 @@ var User = {
     name : "Margi",
     age : 21,
     getName : function () {
-                //console.log("this" + JSON.stringify(this))
-                console.log("this", this)
+                //console.log("this " + JSON.stringify(this))
+                //console.log("this " + this)
+                //console.log("this ", this)
+                console.log("this "+ this.name)
+                var that = this; // resolving this keyword
+
+                setTimeout(function () { //this represents the context (object) and is dynamic in nature
+                    //console.log("this - inside settimeout ", this) 
+                    //console.log("this - inside settimeout "+ this.name)
+                    console.log("this - inside settimeout - copying this to that - "+ that.name)
+                }, 1000)
+
                 return this.name
             }
 
