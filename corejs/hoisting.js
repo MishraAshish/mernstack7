@@ -27,3 +27,23 @@ printName();
 var myfunc = function () {
     console.log("Robin")  
 };
+
+
+
+var index = undefined;
+
+for (index = 0; index < 4; index++) {
+
+    setTimeout(function () {
+        console.log("index settimeout " + index);    // 0,1,2,3 after 1 second
+    }, 1000)
+
+    (function (index) { //using iife we can evaluate immediately
+        setTimeout(function () {
+            console.log("index iife " + index);    // 0,1,2,3 after 1 second
+        }, 1000)
+    })(index)   
+    
+}
+
+console.log("index out " + index) //undefined
