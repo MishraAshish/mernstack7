@@ -27,3 +27,5 @@ console.log("animal sound from ShortHand ", AnimalSoundES6) // we use comma to a
 //console.log("animal sound "+ AnimalSoundES6) // object in incorrect format
 
 console.log("animal sound "+ JSON.stringify(AnimalSoundES6)) // to parse in to object type
+
+module.exports = AnimalSoundES6;
