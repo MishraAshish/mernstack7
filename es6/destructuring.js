@@ -60,7 +60,8 @@ let user = {
 //let age = user.age;
 //let session2 = user.sessions.session2
 
-let {name, age, address = "Default Address", sessions:{session2, session4 = "Java 17"}} = user
+let {name, age, address = "Default Address", sessions:{ session2, session4 = "Java 17"}} = user
+//let {name, age, address = "Default Address", ...sessions} = user
 
 console.log(address)
 console.log(name)
