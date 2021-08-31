@@ -25,7 +25,7 @@ console.log(myMap.size)
 
 
 console.log(myMap.set("twenty four", "reading some personal data"))
-//console.log(myMap.set("twenty four", "reading some personal data")) //duplicates are not allowed
+console.log(myMap.set("twenty four", "reading some personal data 2")) //duplicates are not allowed but will over write the prev value
 
 console.log(myMap.get("twenty four"))
 
@@ -49,7 +49,7 @@ console.log(StudentSet.size)
 console.log(StudentSet.keys())
 
 StudentSet.add("Kim")
-console.log(StudentSet.keys()) // this gets inserted
+console.log(StudentSet.keys()) // this gets all the keys
 
 StudentSet.delete("Hung")
-console.log(StudentSet.keys()) // this gets inserted
+console.log(StudentSet.keys()) // this gets all the keys
