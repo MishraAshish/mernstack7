@@ -34,7 +34,11 @@ console.log(LunchPromise)
 
 LunchPromise.then((data, err)=>{
     console.log("Then ", data)
-}).catch((err)=>{
+    //return JSON.stringify(data); can do data priming and again do then 
+})
+//.then((data, err)=>{
+//    console.log("Then - 2", data)
+//})
+.catch((err)=>{
     console.log("Catch ", err)
 }).finally((data)=>console.log("Finally data ", data))
-
