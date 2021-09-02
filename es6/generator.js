@@ -34,3 +34,28 @@ console.log(printValObj.next())
 //arithmaticCalculator using - generator function - (a,b), 
 //add, subtract, multiply, divide - all this we need to yield
 //Arithmatic Calculator
+
+function *arithmetic(num1, num2){
+    
+    yield console.log("Addition : " + (num1+num2));
+    yield console.log("Subtraction : " + (num1-num2));
+    yield console.log("Multiply : " + (num1*num2));
+    yield console.log("Division : " + (num1/num2));
+    
+    return "Done";
+}
+let calObj = arithmetic(6,2);
+
+calObj.next()
+calObj.next()
+calObj.next()
+calObj.next()
+console.log(calObj.next())
+console.log(calObj.next())
+
+let calObj1 = arithmetic(78599,25);
+
+calObj1.next()
+calObj1.next()
+calObj1.next()
+calObj1.next()
