@@ -1,4 +1,4 @@
-<!-- we need to use "npm init" to initialize npm package manager for our repository
+we need to use "npm init" to initialize npm package manager for our repository
 
 console.log("This is the first command in server.js");
 console.log("as a dev dependency : npm i express -D");
@@ -56,4 +56,4 @@ git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/MishraAshish/MERNStack7.git
-git push -u origin main -->
+git push -u origin main
