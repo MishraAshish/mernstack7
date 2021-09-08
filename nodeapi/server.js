@@ -4,6 +4,10 @@ const express = require('express'); // imported express module or top level clas
 const port = 9090;
 const app = express(); //by invoking top level class we are initilizing the application
 
+const adminApp = express();
+
+app.use('/static', express.static('public')); // serve static files like images css using static middle ware
+
 app.get('/', (req, res)=>{
 
     res.json({
@@ -18,9 +22,49 @@ app.get('/SaveUser', (req, res)=>{ //http://localhost:9090/SaveUser?name=testme&
     res.json(queryObject)
 })
 
-app.get('/Hi', function (req, res) {
+//route params
+app.get('/user/:id/details', (req, res)=>{ //http://localhost:9090/user/25/details
+    let paramsObject = req.params;
+    console.log("paramsObject ", paramsObject)
+    paramsObject["id"] == 25 ?
+    res.json({
+        "status" : "success",
+        "id":paramsObject["id"]
+    }) : 
+    res.json({
+        "status" : "failure",
+        "id":"no id is present"
+    })
+})
+
+//returing a file but its not the correct way of sending a file in response, instead we should use static middleware
+app.get('/GetJson', function (req, res) {
+    res.sendFile(__dirname+"/package.json")
+})
+
+app.get('/Hi', function (req, res) {    
     res.send('I am new to nodemon World')
 })
+
+app.all('/html', function (req, res) {
+
+    console.log(req)
+    res.sendFile(__dirname+"/public/index.html")
+})
+
+app.use('/admin', adminApp);
+
+//mounting of path
+adminApp.get('/helloAdmin', (req, res)=>{
+
+    res.json({
+        "hi":"i am good, i am from admin app"
+    })
+})
+
+// app.all('*', function (req, res) {
+//     res.sendFile(__dirname+"/index.html")
+// })
 
 console.log(`we are listening on port ${port} with url http://localhost:9090`)
 

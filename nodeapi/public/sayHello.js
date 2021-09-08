@@ -1,0 +1,1 @@
+alert("I am saying hello from static configuration of express!")
