@@ -9,7 +9,8 @@ const adminApp = express();
 app.use('/static', express.static('public')); // serve static files like images css using static middle ware
 
 
-app.use('/admin', adminRouter);
+app.use('/admin', adminApp);
+adminApp.use('/', adminRouter);
 
 app.use('/', router); // all the requests coming to express app are routed to router.js
 
