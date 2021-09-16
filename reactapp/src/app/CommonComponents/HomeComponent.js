@@ -1,6 +1,8 @@
 import React, {Fragment,  Component} from "react";
 import Footer from "./FooterComponent";
 import Header from "./HeaderComponent";
+import PropTypes from "prop-types";
+
 
 export default class Home extends Component {
     
@@ -16,7 +18,7 @@ export default class Home extends Component {
                 <Header>
 
                 </Header>
-                <h1>This is my Home Component</h1>
+                <h1>This is my Home Component for - {this.props.sessionName}</h1>
                 <Footer msg={footerMsg} show={this.props.showChildren}>
                     <h4>Child Element 2</h4>
                     <h4>Child Element 3</h4>
@@ -25,4 +27,12 @@ export default class Home extends Component {
             </Fragment>
         )
     }
+}
+
+// Home.defaultProps = {
+//     sessionName : "Default Session Name"
+// }
+
+Home.propTypes = {
+    sessionName : PropTypes.string.isRequired
 }

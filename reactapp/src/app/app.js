@@ -15,7 +15,7 @@ export default class AppComponent extends React.Component {
             showChildren : false
         }
         //this.updateDateTime();
-        
+        this.sessionName; //= "MERNStack";
     }
 
     // setInterval = setInterval(() => {
@@ -38,7 +38,7 @@ export default class AppComponent extends React.Component {
         console.log("Render to generate VDom")
         return(
             <div>
-                <Home showChildren={this.state.showChildren}/>
+                <Home showChildren={this.state.showChildren} sessionName={this.sessionName}/>
                 <button onClick={this.updateDateTime}>I am button to show Children in props!</button>
                 
                 {/* <Header />
