@@ -6,10 +6,11 @@ let Footer = (props)=>{
     //props.children - array of elements passed from parent as child
     return(
         <Fragment>
-             <h1>{props.msg} </h1>
+            <h1>This is the footer component!</h1>
+             {/* <h1>{props.msg} </h1>
             {props.show ? props.children[0] : ""}
             {props.children[1]}
-            {props.children[2]}
+            {props.children[2]} */}
         </Fragment>
     )
 }

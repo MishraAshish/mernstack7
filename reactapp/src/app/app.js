@@ -3,7 +3,9 @@ import React from "react";
 import Footer from "./CommonComponents/FooterComponent";
 import Header from "./CommonComponents/HeaderComponent";
 import Home from "./CommonComponents/HomeComponent";
+import About from "./CommonComponents/AboutComponent";
 
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 export const myname = "Test";
 
 export default class AppComponent extends React.Component {
@@ -37,16 +39,18 @@ export default class AppComponent extends React.Component {
     render(){
         console.log("Render to generate VDom")
         return(
-            <div>
-                <Home showChildren={this.state.showChildren} sessionName={this.sessionName}/>
+            <Router>
+                <Header />
+
+                <Switch>
+                    <Route path="/Home" component={Home}></Route>
+                    <Route path="/About" component={About}></Route>
+                </Switch>
+
                 <button onClick={this.updateDateTime}>I am button to show Children in props!</button>
-                
-                {/* <Header />
-                <h1>This Component is loaded from react app Component</h1>
-                
-                {this.state.currentDate}
-                <Footer /> */}
-            </div>
+
+                <Footer />
+            </Router>
         )
     }
 }
