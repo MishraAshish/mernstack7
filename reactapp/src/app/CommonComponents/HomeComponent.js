@@ -2,7 +2,7 @@ import React, {Fragment,  Component, PureComponent} from "react";
 // import Footer from "./FooterComponent";
 // import Header from "./HeaderComponent";
 import PropTypes from "prop-types";
-
+import ChildComponent from "./ChildOfHome";
 
 export default class Home extends PureComponent {
 //export default class Home extends Component {
@@ -11,19 +11,25 @@ export default class Home extends PureComponent {
         super(props);
 
         this.state = {
-            searchParam : "I have not searched anything"
+            searchParam : "I have not searched anything",
+            sessionName : "MERNStack"
         }
+
+        //ref - keyword uses
+        this.inputAddress = React.createRef(); //as we dont have any html selectors available in react so this provides a reference to html
+        //this.inputAddress.current.focus(); //view can't be accessed in constructor
+        this.inputAge = React.createRef();
     }
 
     //creation life cycle method
     componentDidMount(){
         console.log("componentDidMount")
         //view is accessible
-        // setTimeout(() => {
-        //     this.inputAddress.current.focus();
-        //     this.inputAddress.current.value = "Added Value in Did Mount";   
+        setTimeout(() => {
+            this.inputAddress.current.focus();
+            this.inputAddress.current.value = "Added Value";   
             
-        // }, 3000);
+        }, 3000);
     }
 
     //destruction life cycle methods
@@ -78,6 +84,15 @@ export default class Home extends PureComponent {
         //console.log("searchParam ", this.state.searchParam);
     }
 
+    readDataFromChild = (name) =>{
+        //alert("This is coming from child "+ name)
+        this.setState({
+            sessionName:name
+        })
+
+        this.inputAddress.current.value = name;
+    }
+
     render(){
         let footerMsg = "I am footer for this application";
 
@@ -91,7 +106,17 @@ export default class Home extends PureComponent {
                 <input type="text" value={this.state.searchParam} placeholder="Please type something to search" 
                     onChange={this.searchFunction}/>
 
+                <label>
+                    Address:
+                         <input type="text" ref={this.inputAddress} placeholder="Please enter Address"/>
+                </label>
                 
+                
+                
+                <b>{this.state.sessionName}</b>  
+                
+                <br/>
+                <ChildComponent sendBackToHome = {this.readDataFromChild}/>             
             </Fragment>
         )
     }
@@ -104,3 +129,12 @@ export default class Home extends PureComponent {
 // Home.propTypes = {
 //     sessionName : PropTypes.string.isRequired
 // }
+
+
+
+//Create a component with your name (first)
+//Show all lifecycle hooks that have been discussed
+//Create another example with Pure component
+//Make that pure component child of first component
+//Pass a event/function as a prop to Child component and use it to send data back, and show update 
+//use ref keyword to access one element in first component
