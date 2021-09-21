@@ -1,9 +1,11 @@
 import React from "react";
 
+import "./app.css";
 import Footer from "./CommonComponents/FooterComponent";
 import Header from "./CommonComponents/HeaderComponent";
 import Home from "./CommonComponents/HomeComponent";
 import About from "./CommonComponents/AboutComponent";
+import NotFound from "./CommonComponents/NotFoundComponent";
 
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 export const myname = "Test";
@@ -37,17 +39,24 @@ export default class AppComponent extends React.Component {
     }
 
     render(){
-        console.log("Render to generate VDom")
+        console.log("Render to generate VDom");
+        let admin = false;
+
         return(
             <Router>
                 <Header />
 
                 <Switch>
-                    <Route path="/Home" component={Home}></Route>
-                    <Route path="/About" component={About}></Route>
+                    <Route path="/" exact render={()=> (admin ? (<Redirect to="/Home" />) : (<About/> ))} />
+                    <Route path="/Home" exact component={Home}></Route>
+                    <Route path="/About" exact component={About}></Route>
+                    <Route path="/About/:id" exact component={About}></Route>
+
+                    <Route path="/" exact component={Home}></Route>
+                    <Route path="*" component={NotFound}></Route>
                 </Switch>
 
-                <button onClick={this.updateDateTime}>I am button to show Children in props!</button>
+                {/* <button onClick={this.updateDateTime}>I am button to show Children in props!</button> */}
 
                 <Footer />
             </Router>

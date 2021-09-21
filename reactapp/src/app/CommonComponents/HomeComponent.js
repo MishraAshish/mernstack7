@@ -1,6 +1,4 @@
 import React, {Fragment,  Component, PureComponent} from "react";
-// import Footer from "./FooterComponent";
-// import Header from "./HeaderComponent";
 import PropTypes from "prop-types";
 import ChildComponent from "./ChildOfHome";
 
@@ -25,11 +23,11 @@ export default class Home extends PureComponent {
     componentDidMount(){
         console.log("componentDidMount")
         //view is accessible
-        setTimeout(() => {
-            this.inputAddress.current.focus();
-            this.inputAddress.current.value = "Added Value";   
+        // setTimeout(() => {
+        //     this.inputAddress.current.focus();
+        //     this.inputAddress.current.value = "Added Value";   
             
-        }, 3000);
+        // }, 3000);
     }
 
     //destruction life cycle methods
@@ -94,30 +92,65 @@ export default class Home extends PureComponent {
     }
 
     render(){
-        let footerMsg = "I am footer for this application";
-
         console.log("Render Home")
-
         return(
-            <Fragment>
-                
-                <h1>This is my Home Component for - {this.props.sessionName}</h1>
-
-                <input type="text" value={this.state.searchParam} placeholder="Please type something to search" 
-                    onChange={this.searchFunction}/>
-
-                <label>
+            <div className={"loadimage form"} style={{backgroundImage: "url(/images/hm_pic4.jpg)"}}>
+                    {/* <p>{this.state.name}</p> */}
+                    {/* <img src={"./images/hm_pic4.jpg"} /> */}
+                    {/* {this.state.Title} */}
+                    <b className="feature">{"Below Feature's We've Implemented in our project :"}</b>
+                    <ul>                     
+                        <li>Sign up new users</li>
+                        <li>Login existing users.</li>
+                        <li>Add products/items to create product collection.</li>
+                        <li>Allow user's to add to cart.</li>
+                        <li>Save the user's cart.</li>
+                        <li>Checkout and pay for items.</li>
+                        <li>Allow users to cancel the order.</li>
+                        <li>Allow users to reorder the cart.</li>
+                        <li>Allow users to give ratings to each product.</li>
+                        <li>Have notifications on top right with logout.</li>
+                    </ul>
+                    {/* <label>
                     Address:
-                         <input type="text" ref={this.inputAddress} placeholder="Please enter Address"/>
-                </label>
-                
-                
-                
-                <b>{this.state.sessionName}</b>  
-                
-                <br/>
-                <ChildComponent sendBackToHome = {this.readDataFromChild}/>             
-            </Fragment>
+                         <input type="text" ref={this.inputAddress} placeholder="Please enter age"/>
+                     </label> */}
+                    <button className={"form-control btn btn-primary col-md-2"} onClick={()=> this.props.history.push("/about/2500")}>GoTo About Page</button>
+                    
+                    <button className={"form-control btn btn-primary col-md-2"} onClick={()=> this.props.history.push("/LearnHooks")}>GoTo User Hooks</button>
+                    
+                    {/* <img  src="/images/hm_pic4.jpg"/> */}
+
+                    {/* controlled Component implementation using ref keyword */}
+                   {/* <form onSubmit={this.handleSubmit}>
+                       <label>
+                         Address:
+                           <input type="text" ref={this.inputAddress} placeholder="Please enter address"/>
+                       </label>
+                      
+                       <label>
+                         Age:
+                           <input type="text" ref={this.inputAge} placeholder="Please enter age"/>
+                         </label>
+
+                       <input type="submit" value="Submit" />
+                  </form>
+                    <label>
+                         Address:
+                           {this.state.address}
+                    </label>
+                    <label>
+                         Age:
+                         {this.state.age}
+                    </label>
+                    <input type="text" placeholder="Please enter your name" 
+                            value={this.state.name} 
+                            onChange={this.changeNameOnType}/>
+
+                    <button className={"form-control btn btn-primary col-md-2"} 
+                        onClick={this.updateNameEvent}>Update Name</button>
+                    <Dummy name={this.state.name} updateName={this.updateNameAsCallBk}/> */}
+                </div>
         )
     }
 }
@@ -138,3 +171,7 @@ export default class Home extends PureComponent {
 //Make that pure component child of first component
 //Pass a event/function as a prop to Child component and use it to send data back, and show update 
 //use ref keyword to access one element in first component
+
+//create navigations for your own name page
+// also move to that page on button click
+// make a route with path params in it
