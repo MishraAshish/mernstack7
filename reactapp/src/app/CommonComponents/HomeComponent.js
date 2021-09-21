@@ -10,7 +10,9 @@ export default class Home extends PureComponent {
 
         this.state = {
             searchParam : "I have not searched anything",
-            sessionName : "MERNStack"
+            sessionName : "MERNStack",
+            age : "",
+            address : ""
         }
 
         //ref - keyword uses
@@ -91,6 +93,18 @@ export default class Home extends PureComponent {
         this.inputAddress.current.value = name;
     }
 
+    handleSubmit = (evt)=>{
+        let age = this.inputAge.current.value;
+        let address = this.inputAddress.current.value;
+
+        this.setState({
+            age,
+            address
+        })
+
+        evt.preventDefault(); //to stop the default behaviour of form submission to server
+    }
+
     render(){
         console.log("Render Home")
         return(
@@ -122,7 +136,7 @@ export default class Home extends PureComponent {
                     {/* <img  src="/images/hm_pic4.jpg"/> */}
 
                     {/* controlled Component implementation using ref keyword */}
-                   {/* <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit}>
                        <label>
                          Address:
                            <input type="text" ref={this.inputAddress} placeholder="Please enter address"/>
@@ -143,6 +157,7 @@ export default class Home extends PureComponent {
                          Age:
                          {this.state.age}
                     </label>
+                    {/*
                     <input type="text" placeholder="Please enter your name" 
                             value={this.state.name} 
                             onChange={this.changeNameOnType}/>
