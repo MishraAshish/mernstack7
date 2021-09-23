@@ -5,10 +5,10 @@ export default class UserComponent extends Component {
     constructor(props, context){
         super(props);
         this.state = {
-            userName : "bla bla bla",
-            password : "bla bla bla 2",
-            street : "bla bla bla 3",
-            mobile : "000021515"
+            userName : props.user.userName, //coming from mapStateToProps - (user)
+            password :  props.user.password,
+            street :  props.user.street,
+            mobile :  props.user.number
         }
 
     }
@@ -38,8 +38,12 @@ export default class UserComponent extends Component {
     }
 
     loginUser = (evt)=>{
+        //alert(JSON.stringify(this.state))
 
-        alert(JSON.stringify(this.state))
+        //using a publisher method adduser to dispatch action
+
+        //this.props.addUser(this.state)
+        this.props.loginUserDb(this.state)
 
         evt.preventDefault();
     }

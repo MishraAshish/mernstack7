@@ -6,7 +6,8 @@ import Header from "./CommonComponents/HeaderComponent";
 import Home from "./CommonComponents/HomeComponent";
 import About from "./CommonComponents/AboutComponent";
 import NotFound from "./CommonComponents/NotFoundComponent";
-import User from "./ApplicationComponents/Components/User/UserComponent";
+//import User from "./ApplicationComponents/Components/User/UserComponent";
+import User from "./ApplicationComponents/Container/User/UserContainer";
 
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 export const myname = "Test";
