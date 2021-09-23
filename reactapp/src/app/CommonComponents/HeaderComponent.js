@@ -5,6 +5,7 @@ export default function Header(props) {
     return(
        <Fragment>
            <NavLink to="/home" className="button" activeClassName="success" >Home </NavLink>             
+           <NavLink to="/user" className="button" activeClassName="success" >User </NavLink>             
            <NavLink to="/about" className="button" activeClassName="success" >About </NavLink>
         </Fragment>
     )

@@ -135,7 +135,7 @@ export default class Home extends PureComponent {
                     
                     {/* <img  src="/images/hm_pic4.jpg"/> */}
 
-                    {/* controlled Component implementation using ref keyword */}
+                    {/* un-controlled Component implementation using ref keyword as react doesn't checks for the updates in html*/}
                     <form onSubmit={this.handleSubmit}>
                        <label>
                          Address:
@@ -157,11 +157,13 @@ export default class Home extends PureComponent {
                          Age:
                          {this.state.age}
                     </label>
+
+                    {/* An input form element whose value is controlled by React in this way is called a “controlled component”. */}
                     {/*
                     <input type="text" placeholder="Please enter your name" 
                             value={this.state.name} 
                             onChange={this.changeNameOnType}/>
-
+ 
                     <button className={"form-control btn btn-primary col-md-2"} 
                         onClick={this.updateNameEvent}>Update Name</button>
                     <Dummy name={this.state.name} updateName={this.updateNameAsCallBk}/> */}
