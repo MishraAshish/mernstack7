@@ -17,7 +17,7 @@ router.post("/api/signinup", (req, res)=>{ //localhost:9090/user/api/signinup
 
             userDataObject.save((err, newUserData)=>{ //error first callback
                 if (err) {
-                    console.log("error in sign up", error);
+                    console.log("error in sign up", err);
                     res.send("Error in sign up user");
                 } else {
                     res.send(newUserData); //if user gets successfully created we will get the mongodb unique id

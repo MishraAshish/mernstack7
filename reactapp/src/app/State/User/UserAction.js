@@ -26,7 +26,7 @@ export const signinUpuser = (userObject) => {
                     },
                     body: JSON.stringify(userObject)
                 })
-            .then(response => response.json())//response from the server/ api
+            .then(response => response.json())//response from the server/ api - parsing to json
             .then(userresp => {
                 console.log("response ", userresp); // this response will come with _id
     

@@ -13,7 +13,7 @@ function Header(props) {
     )
 }
 
-
+//subscriber 
 let mapStateToProps = (state)=>{
     return {
         user : state.userReducer.user

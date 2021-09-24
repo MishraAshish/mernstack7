@@ -25,3 +25,24 @@ export default createStore(
     {}, //intial state for store states
     applyMiddleware(logger, thunk, promise) //middle wares tp used at various places like action.js
 )
+
+
+//redux -
+//store - single source of truth (collection of all the states)
+//actions - object {} //type (saveuser) and payload (userobject), actiontypes
+//reducers - this is to create intial state and new state upon any ation getting dispatched
+//dispather - to take action to store(reducer)
+//action creator - html element with we raise the action
+
+//react-redux -
+//will use to get store in our react components so usage will in container
+
+//redux thunk - as middleware
+//to make call to server
+
+//promise middle ware to use
+
+//api's
+// signinupuser api
+
+//npm install react-redux redux redux-promise-middleware redux-thunk
