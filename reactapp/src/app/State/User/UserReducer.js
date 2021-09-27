@@ -5,9 +5,9 @@ import * as ActionTypes from "../actionTypes";
 
 let INITIAL_STATE = {
     user : {
-        userName : "reda",
-        password : "redb",
-        street : "redc",
+        userName : "",
+        password : "",
+        street : "",
         mobile : 0,
         _id: ""
     }

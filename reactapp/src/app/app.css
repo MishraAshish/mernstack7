@@ -358,6 +358,10 @@ optgroup {
 .footer a{
   color:#fff;
 }
+.userHook{
+  border: 1px solid rgb(153, 117, 51);
+  margin: 20px;
+}
 .aboutUsPage{
   border: 1px solid grey;
   font-weight: bold;
