@@ -23,6 +23,9 @@ let User = (props)=>{
     //this hook is used to do the job of mapDispatchToProps, we need to initilize it and then use it on handler
     const dispatchToSignin = useDispatch();
 
+    const setInt= setInterval(() => {
+        console.log("My name is Something")
+    }, 1000);
 
     // replacemnet of shouldComponentUpdate or componentDidMount
     useEffect(()=>{
@@ -34,7 +37,9 @@ let User = (props)=>{
 
         //componentWillUnmount
         return function cleanup() {
-            console.log("useEffect is working as component will unmount, to cleanup the component")
+            //we must avoid doing any data cleanup, it is for javascript functions, callbacks, 
+            console.log("useEffect is working as component will unmount, to cleanup the component");
+            clearInterval(setInt); //cleaning up interval call
         };
     })
 
@@ -103,5 +108,5 @@ let User = (props)=>{
 }
 
 //React.memo - is an optimization extension of react which does shallow equal of props to save re-render
-//export default React.memo(User);
-export default User;
+export default React.memo(User);
+//export default User;

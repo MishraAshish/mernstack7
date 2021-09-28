@@ -2,3 +2,6 @@
 
 //For User
 export const AddUserToStore = "USER.AddUserToStore";
+
+//For Product
+export const SaveProduct = "Product.SaveProduct";
