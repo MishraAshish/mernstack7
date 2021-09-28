@@ -5,6 +5,7 @@ const app = express(); //by invoking top level class we are initilizing the appl
 const router = require('./route/router');
 const adminRouter = require('./route/adminRouter');
 const userRouter = require('./route/userRouter');
+const productRouter = require("./route/productRouter");
 
 const adminApp = express();
 
@@ -16,6 +17,7 @@ app.use(express.json({limit:'2mb', extended:false})); //json middle-ware for set
 app.use('/admin', adminApp);
 adminApp.use('/', adminRouter);
 
+app.use('/product', productRouter);
 app.use('/user', userRouter); //redirecting all user api calls to user router
 app.use('/', router); // all the requests coming to express app are routed to router.js
 
