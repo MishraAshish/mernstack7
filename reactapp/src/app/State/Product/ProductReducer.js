@@ -1,7 +1,13 @@
 import * as ActionTypes from "../actionTypes";
 
 let INITIAL_STATE = {
-     products:[]
+     products:[],
+     defaultProduct : {
+         name : "Product Name 2",
+         price : 2,
+         desc : "Product Description 2",
+         rating : "Product Rating 2"
+     }
 }
 
 export default function ProductReducer(state=INITIAL_STATE, action)
