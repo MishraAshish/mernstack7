@@ -2,6 +2,7 @@ import React , { useState, Fragment, useEffect } from "react";
 import {useSelector, useDispatch } from "react-redux";
 
 import { saveProduct} from "../../../State/Product/ProductAction";
+import DisplayProduct from "./DisplayProduct";
 
 let ProductComponent = ( props ) => {
 
@@ -79,6 +80,7 @@ let ProductComponent = ( props ) => {
                         onClick={saveProductClick}/>
                     </div>
                 <br/>
+                <DisplayProduct />
             </section>
         </Fragment>
     )
