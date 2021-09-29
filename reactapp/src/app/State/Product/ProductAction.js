@@ -48,6 +48,6 @@ export const fetchProducts = ()=>{
 }
 
 export const addProductToStore = (productList)=>({
-    type: ActionTypes.FETCH_PRODUCTS,
+    type: ActionTypes.ADD_PRODUCTS_TOSTORE,
     payload: {productList}
 })
