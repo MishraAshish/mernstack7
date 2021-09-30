@@ -12,6 +12,9 @@
 
 // In the header component we want to show only three navigations - Home, User, About, when user lands on page
 // If user is signed in then only we want to show all the navigations
+// If user is not signed in then we show a banner or message on top - to use Login page to see other features
+// Once user sign in then - Welcome "Margi", to Shopping cart application
+// the user navigation link should say - Login, untill user is signed in
 
 // On product page the signed in user with name - Admin, should only be allowed to add product
 
