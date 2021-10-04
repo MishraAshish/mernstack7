@@ -1,3 +1,17 @@
+// Practice Question : Checkout Page - 05/10/2021
+
+// Create A functional component and use react hook or using container to read data from store
+// Show - User Details (Name, address) //We will deliver products to below address kind of message as well
+// Show Table of cart put up for purchase (you need to re-use the cartlist and cartitem components)
+// Show the purchase Summary (total qty and total amount)
+// Show a Button to Proceed to Payment
+// Integrate this page on CartComponent Button (Go to checkout)
+
+// Second Task :
+// Create a state using useState to show hide (Make Payment Message)
+// Upon Clicking on MakePayment button, hide everything and just show the message - "Thankyou for the payment, your items under process!"
+// Change the header from Checkout Page to Payment Page
+
 
 // Practice : 30/09/2021 
 

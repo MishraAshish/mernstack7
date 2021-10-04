@@ -1,6 +1,7 @@
 import React from "react";
-
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import "./app.css";
+
 import Footer from "./CommonComponents/FooterComponent";
 import Header from "./CommonComponents/HeaderComponent";
 import Home from "./CommonComponents/HomeComponent";
@@ -10,12 +11,7 @@ import UserHook from "./ApplicationComponents/Components/User/UserComponentHooks
 // import User from "./ApplicationComponents/Container/User/UserContainer";
 import Product from "./ApplicationComponents/Components/Product/ProductComponent";
 import DisplayProduct from "./ApplicationComponents/Components/Product/DisplayProduct";
-
-//yes, having an issue with mic
-
-import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import CartComponent from "./ApplicationComponents/Components/Cart/CartComponent";
-export const myname = "Test";
 
 export default class AppComponent extends React.Component {
 
@@ -54,7 +50,7 @@ export default class AppComponent extends React.Component {
                 <Header />
 
                 <Switch>
-                    <Route path="/" exact render={()=> (admin ? (<Redirect to="/home" />) : (<About/> ))} />
+                    <Route path="/" exact render={()=> (admin ? (<Redirect to="/home" />) : (<UserHook/> ))} />
                     <Route path="/home" exact component={Home}></Route>
                     <Route path="/userhook" exact component={UserHook}></Route>
                     <Route path="/cart" exact component={CartComponent}></Route>
