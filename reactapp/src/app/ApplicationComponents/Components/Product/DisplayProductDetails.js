@@ -1,10 +1,13 @@
 import React, {useState} from "react";
+import { useDispatch } from "react-redux";
 
+import { addItemToCart } from "../../../State/Cart/CartActions";
 
 let DisplayProductDetails = ({product})=>{
 
     const [showHide, showHideDetails] = useState(false);
-
+    
+    const dispatchAddToCart = useDispatch();
     //console.log("render ", product);
 
     const handleClick = (evt) => {
@@ -15,8 +18,8 @@ let DisplayProductDetails = ({product})=>{
     }
 
     const addProductToCart = (product)=>{
-        alert("product "+ JSON.stringify(product))
-        
+        //alert("product "+ JSON.stringify(product))
+        dispatchAddToCart(addItemToCart(product));
     }
 
     return(

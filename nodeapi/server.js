@@ -6,6 +6,7 @@ const router = require('./route/router');
 const adminRouter = require('./route/adminRouter');
 const userRouter = require('./route/userRouter');
 const productRouter = require("./route/productRouter");
+const cartRouter = require("./route/cartRouter");
 
 const adminApp = express();
 
@@ -18,6 +19,7 @@ app.use('/admin', adminApp);
 adminApp.use('/', adminRouter);
 
 app.use('/product', productRouter);
+app.use('/cart', cartRouter);
 app.use('/user', userRouter); //redirecting all user api calls to user router
 app.use('/', router); // all the requests coming to express app are routed to router.js
 

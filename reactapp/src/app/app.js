@@ -14,6 +14,7 @@ import DisplayProduct from "./ApplicationComponents/Components/Product/DisplayPr
 //yes, having an issue with mic
 
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+import CartComponent from "./ApplicationComponents/Components/Cart/CartComponent";
 export const myname = "Test";
 
 export default class AppComponent extends React.Component {
@@ -56,7 +57,7 @@ export default class AppComponent extends React.Component {
                     <Route path="/" exact render={()=> (admin ? (<Redirect to="/home" />) : (<About/> ))} />
                     <Route path="/home" exact component={Home}></Route>
                     <Route path="/userhook" exact component={UserHook}></Route>
-                    {/* <Route path="/user" exact component={User}></Route> */}
+                    <Route path="/cart" exact component={CartComponent}></Route>
                     <Route path="/Product" exact component={Product}></Route>
                     <Route path="/display" exact component={DisplayProduct}></Route>
                     <Route path="/about" exact component={About}></Route>

@@ -2,6 +2,7 @@
 //action is an object that contains - type (action type) and payload (the data object to be passed to store)
 import * as ActionTypes from "../actionTypes";
 
+import { getUserCart} from "../Cart/CartActions";
 //action that would be dispatched to the store (eventually to reducer)
 export const addUserToStore = (user) => ({        
     type: ActionTypes.AddUserToStore,
@@ -34,7 +35,7 @@ export const signinUpuser = (userObject) => {
                 dispatch(action); // it will keep the current context to update the user object and takes it to the reducer
                 
                 //dispatch(loading(false));
-                //dispatch(getUserCart(userresp._id));
+                dispatch(getUserCart(userresp._id));
             })
             .catch((err)=>{
                 console.log("Error While Login", err)

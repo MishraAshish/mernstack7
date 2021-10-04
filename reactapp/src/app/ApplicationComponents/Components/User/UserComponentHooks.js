@@ -79,19 +79,19 @@ let User = (props)=>{
                 <label>
                     <b>User Name :</b>
                     <input type="text" className={"form-control col-md-12"} ref={inputUserName} 
-                            placeholder="Please enter user name" maxLength={25}/>
+                            placeholder="Please enter user name" maxLength={20} required/>
                 </label>
                 <br/>
                 <label>
                     <b>Password :</b>
                     <input type="password" className={"form-control col-md-12"} ref={inputPassword} 
-                            placeholder="Please enter password" maxLength={25}/>
+                            placeholder="Please enter password" maxLength={20} />
                 </label>
                 <br/>
                 <label>
                     <b>Street :</b>
                     <input type="text" className={"form-control col-md-12"} ref={inputStreet} 
-                            placeholder="Please enter address" maxLength={25}/>
+                            placeholder="Please enter address" maxLength={20}/>
                 </label>
                 <br/>
                 <label>
