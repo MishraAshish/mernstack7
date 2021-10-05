@@ -1,3 +1,12 @@
+// Coupon Page - 06/10/2021
+// Create a component with Name - CouponComponent (Functional Component and Use Hooks)
+// On the page add a Button - GenerateCoupon
+// Upon Click Generate a random coupon of - 6 digits (basically a numeric random value)
+// Dispatch this generated coupon using useDispatch
+// Create a Coupon Reducer to have Coupon Value, Use Reducer to update the coupon value (useSelector coupon)
+// Create action to pass coupon to reducer, with type and payload
+
+
 // Practice Question : Checkout Page - 05/10/2021
 
 // Create A functional component and use react hook or using container to read data from store
