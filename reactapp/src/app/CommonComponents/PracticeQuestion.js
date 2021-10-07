@@ -1,3 +1,11 @@
+
+// Upon Cancel Click - 07/10/2021
+// Save the order to CancelledOrders collection (should have userid, cancelled, dateTime)
+// Make API to Save and Fetch from CancelledOrders
+// Make a component CancelledOrders to Show all cancelled Orders of current user in Latest First
+// Add a button to Buy Again, (also show a message - This offer is much more exciting)
+// Upon Adding this should get appended to the existing Cart that is shown in Carts App
+
 // Recentorder Page - 06/10/2021
 // Upon MakePayment Click
 // Save the cart to RecentOrders collection (should have userid, order, dateTime)

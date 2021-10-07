@@ -3,6 +3,8 @@
 import * as ActionTypes from "../actionTypes";
 
 import { getUserCart} from "../Cart/CartActions";
+import { loading} from "../Loading/LoadingAction";
+
 //action that would be dispatched to the store (eventually to reducer)
 export const addUserToStore = (user) => ({        
     type: ActionTypes.AddUserToStore,
@@ -16,7 +18,7 @@ export const signinUpuser = (userObject) => {
         // here we go with ajax call : to save data to the server or fetch is from the server
         // thunk shall call
         console.log("called by thunk");
-        //dispatch(loading(true));
+        dispatch(loading(true));
 
         window.fetch("http://localhost:9090/user/api/signinup",//uri or end point of singninup api
                 {
@@ -34,7 +36,7 @@ export const signinUpuser = (userObject) => {
                 let action = addUserToStore(userresp);
                 dispatch(action); // it will keep the current context to update the user object and takes it to the reducer
                 
-                //dispatch(loading(false));
+                dispatch(loading(false));
                 dispatch(getUserCart(userresp._id));
             })
             .catch((err)=>{

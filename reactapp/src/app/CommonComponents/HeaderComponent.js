@@ -16,6 +16,7 @@ function Header(props) {
                 <React.Fragment> 
                     <NavLink to="/product" className="button" activeClassName="success" >Product </NavLink> 
                     <NavLink to="/cart" className="button" activeClassName="success" >Cart </NavLink>
+                    <NavLink to="/checkout" className="button" activeClassName="success" >Checkout </NavLink>
                 </React.Fragment>
             }
             <NavLink to="/about" className="button" activeClassName="success" >About </NavLink> 

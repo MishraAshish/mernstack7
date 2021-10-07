@@ -12,6 +12,8 @@ import UserHook from "./ApplicationComponents/Components/User/UserComponentHooks
 import Product from "./ApplicationComponents/Components/Product/ProductComponent";
 import DisplayProduct from "./ApplicationComponents/Components/Product/DisplayProduct";
 import CartComponent from "./ApplicationComponents/Components/Cart/CartComponent";
+import CheckoutComponent from "./ApplicationComponents/Components/Checkout/CheckoutComponent";
+import Coupon from "./ApplicationComponents/Components/Coupon/CouponComponent";
 
 export default class AppComponent extends React.Component {
 
@@ -56,6 +58,8 @@ export default class AppComponent extends React.Component {
                     <Route path="/cart" exact component={CartComponent}></Route>
                     <Route path="/Product" exact component={Product}></Route>
                     <Route path="/display" exact component={DisplayProduct}></Route>
+                    <Route path="/checkout" exact component={CheckoutComponent}></Route>
+                    <Route path="/coupon" exact component={Coupon}></Route>
                     <Route path="/about" exact component={About}></Route>
                     <Route path="/about/:id" exact component={About}></Route>
 

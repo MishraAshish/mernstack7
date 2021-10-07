@@ -6,11 +6,13 @@ import CartSummaryComponent from "./CartSummaryComp";
 
 import { saveCartToDb } from "../../../State/Cart/CartActions";
 
+
 let CartComponent = (props)=>{
 
     //we are subscribing to cart state
     const CartList = useSelector((state)=>state.cartReducer);
-    const User = useSelector((state)=>state.userReducer.user)
+    const User = useSelector((state)=>state.userReducer.user);
+    let loading = useSelector((state)=>state.loadingReducer.loading);
 
     const dispatchToSaveCart = useDispatch();
 
@@ -45,6 +47,9 @@ let CartComponent = (props)=>{
         {
             CartList && CartList.length > 0 ? 
             <Fragment>
+                   
+                {loading ? "We are saving your data. Please wait" :
+            <Fragment>
             <table>
                     <thead>
                         <tr>
@@ -78,8 +83,7 @@ let CartComponent = (props)=>{
                     </tbody>
                 </table>
 
-                <CartSummaryComponent data={recalculate(CartList)}/>
-                
+            <CartSummaryComponent data={recalculate(CartList)}/>
                 {
                     props.readOnly ? "" : 
                         <React.Fragment>
@@ -93,9 +97,11 @@ let CartComponent = (props)=>{
                         </React.Fragment> 
                 }
 
+                </Fragment>        }
+
                 </Fragment>
             :
-            <h3>No Items Present in cart to display. Please select some items from Product Tab.</h3>
+            <h3>No Items Present in cart to display. Please select some items from Product Tab.</h3>            
         }
         </Fragment>
     )
