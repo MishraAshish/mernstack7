@@ -1,5 +1,5 @@
 
-// Review Page - 10/08/2021
+// Review Page - 08/10/2021
 // This should get its reviews from recent orders page
 // User should be allowed to give ratings and his comments to each products
 // Upon successful submission each product should have a link to show its review 
@@ -7,7 +7,7 @@
 // on recent order page we can show a popup to submit rating or a new page its up to you //can use -> react bootstrap
 // user should only be able to give rating once cancel button is gone
 
-// Reorder - 10/08/2021
+// Reorder - 08/10/2021
 // User to reorder from recent orders or from cancelled orders
 // A Simple process just add the order to your cart and replace or merge whatever is present in cart
 
