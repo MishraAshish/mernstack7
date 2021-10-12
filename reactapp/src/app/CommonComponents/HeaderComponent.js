@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
+import { Dropdown, Button, ButtonGroup } from "react-bootstrap"
 
 function Header(props) {
     let userName = props.user.userName; //reading from userReducer
@@ -17,9 +18,21 @@ function Header(props) {
                     <NavLink to="/product" className="button" activeClassName="success" >Product </NavLink> 
                     <NavLink to="/cart" className="button" activeClassName="success" >Cart </NavLink>
                     <NavLink to="/checkout" className="button" activeClassName="success" >Checkout </NavLink>
+                    <Dropdown as={ButtonGroup}>
+                <Button variant="success">Split Button</Button>
+
+                <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+
+                <Dropdown.Menu>
+                    <Dropdown.Item href="/about">About</Dropdown.Item>
+                    <Dropdown.Item href="/product">Product</Dropdown.Item>
+                    <Dropdown.Item href="/checkout">Checkout</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
                 </React.Fragment>
             }
             <NavLink to="/about" className="button" activeClassName="success" >About </NavLink> 
+            
         </Fragment>
     )
 }

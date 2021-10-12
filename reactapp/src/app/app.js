@@ -1,6 +1,8 @@
 import React from "react";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import "./app.css";
+import './bootstrap.min.css';
+//npm install react-bootstrap@next bootstrap@5.1.1
 
 import Footer from "./CommonComponents/FooterComponent";
 import Header from "./CommonComponents/HeaderComponent";
