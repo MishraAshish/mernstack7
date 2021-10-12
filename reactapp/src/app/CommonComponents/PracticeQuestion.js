@@ -1,4 +1,8 @@
 
+// Logout : 12/10/2021
+// LogOut : Set up logout button/link on TopRight corner, upon click user should be cleared and back to home
+
+
 // Notifications : 11/10/2021
 
 // Show notification on top of header (Right Corner)
@@ -88,8 +92,6 @@
 // the user navigation link should say - Login, untill user is signed in
 
 // On product page the signed in user with name - Admin, should only be allowed to add product
-
-
 
 
 
