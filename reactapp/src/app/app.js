@@ -16,6 +16,8 @@ import DisplayProduct from "./ApplicationComponents/Components/Product/DisplayPr
 import CartComponent from "./ApplicationComponents/Components/Cart/CartComponent";
 import CheckoutComponent from "./ApplicationComponents/Components/Checkout/CheckoutComponent";
 import Coupon from "./ApplicationComponents/Components/Coupon/CouponComponent";
+import UseCallBackHook from "./Hooks/UseCallBackHook";
+import UseMemoHook from "./Hooks/UseMemoHook";
 
 export default class AppComponent extends React.Component {
 
@@ -72,6 +74,8 @@ export default class AppComponent extends React.Component {
                 {/* <button onClick={this.updateDateTime}>I am button to show Children in props!</button> */}
 
                 <Footer />
+                <UseCallBackHook></UseCallBackHook>
+                <UseMemoHook/>
             </Router>
         )
     }
